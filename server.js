@@ -3,6 +3,14 @@ const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
 
+fetch("https://bia-jppx.onrender.com")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // use this to update the HTML
+  })
+  .catch(error => console.error("Error fetching stock data:", error));
+
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
