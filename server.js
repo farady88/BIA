@@ -13,7 +13,9 @@ const PORT = process.env.PORT || 3000;
 const API_KEY = process.env.FINNHUB_API_KEY;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://fa585.brighton.domains'  // Your frontend domain
+}));
 app.use(express.static('public')); // if you're hosting the frontend from 'public'
 
 // Routes
